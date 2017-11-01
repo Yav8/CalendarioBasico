@@ -54,4 +54,33 @@ public class CalendarioBasico {
             ano = 0;
         }
     }
+
+    /**
+     * Permite indicarnos la fecha en la que nos encontramos actualmente,
+     * separando día, mes y año con guiones.
+     */
+    public String obtenerFecha() {
+        String fechaEntera;
+        if(dia < 10) {
+            fechaEntera = "0" + dia;
+        }
+        else {
+            fechaEntera = "" + dia;
+        }
+        fechaEntera += "-";
+        if(mes < 10) {
+            fechaEntera += "0" + mes;
+        }
+        else {
+            fechaEntera += "" + mes;
+        }
+        fechaEntera += "-";
+        if(ano < 10) {
+            fechaEntera += "0" + ano;
+        }
+        else {
+            fechaEntera += "" + ano;
+        }
+        return fechaEntera;
+    }
 }
