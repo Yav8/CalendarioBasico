@@ -21,4 +21,13 @@ public class CalendarioBasico {
         mes = 1;
         ano = 1;
     }
+
+    /**
+     * Fija el día, mes y año que deseemos.
+     */
+    public void fijarFecha(int fijaDia, int fijaMes, int fijaAno) {
+        dia = fijaDia;
+        mes = fijaMes;
+        ano = fijaAno;
+    }
 }
