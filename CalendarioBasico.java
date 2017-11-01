@@ -30,4 +30,28 @@ public class CalendarioBasico {
         mes = fijaMes;
         ano = fijaAno;
     }
+
+    /**
+     * Avanza un día la fecha actual.
+     * Si nos encontramos en el día 30 y avanzamos 1 día,
+     * pasará a ser día 01 del mes siguiente.
+     * Si estuviésemos en el día 30 y mes 12 y avanzáramos 1 día,
+     * pasará a ser día 01 del mes 01 del año siguiente.
+     * Si llegáramos al día 30, mes 12 y año 99 y avanzáramos 1 día,
+     * pasaríamos al día 01, mes 01 y año 00.
+     */
+    public void avanzarFecha() {
+        dia += 1;
+        if(dia == 31) {
+            dia = 1;
+            mes += 1;
+        }
+        if(mes == 13) {
+            mes = 1;
+            ano += 1;
+        }
+        if(ano == 100) {
+            ano = 0;
+        }
+    }
 }
